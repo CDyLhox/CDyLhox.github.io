@@ -3,7 +3,7 @@ const paintings = document.querySelectorAll(".painting");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 
-const modalImage = document.getElementById("modalImage");
+const modalImages = document.getElementById("modalImages");
 const modalTitle = document.getElementById("modalTitle");
 const modalDate = document.getElementById("modalDate");
 const modalDescription = document.getElementById("modalDescription");
@@ -25,7 +25,7 @@ paintings.forEach(p => {
       modalImages.appendChild(img);
     });
 
-    modalImages.scrollTop = 0; // start at finished work
+    modalImages.scrollTop = 0;
   });
 });
 
