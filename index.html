@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painter Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gallery">
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="acrylic on paper"
+    data-process='[
+      "assets/images/painting1/painting1.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting1/painting1.png" alt="">
+  </div>
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="acrylic on paper"
+    data-process='[
+      "assets/images/painting2/painting2.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting2/painting2.png" alt="">
+  </div>
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="Oil on canvas"
+    data-process='[
+      "assets/images/painting3/painting3.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting3/painting3.png" alt="">
+  </div>
+
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="Oil on canvas"
+    data-process='[
+      "assets/images/painting4/painting4.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting4/painting4.png" alt="">
+  </div>
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="Oil on canvas"
+    data-process='[
+      "assets/images/painting5/painting6.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting6/painting6.png" alt="">
+  </div>
+
+    <!-- IMAGE 1-->
+  <div class="painting"
+    data-title="Untitled"
+    data-date="2024"
+    data-description="Oil on canvas"
+    data-process='[
+      "assets/images/painting5/painting5.png",
+      "assets/images/painting1/process1.png",
+      "assets/images/painting1/process2.png",
+      "assets/images/painting1/process3.png"
+    ]'>
+    <img src="assets/images/painting5/painting5.png" alt="">
+  </div>
+</div>
+
+
+
+  <!-- SINGLE modal -->
+  <div class="modal" id="modal">
+    <div class="close" id="closeModal">✕</div>
+
+    <div class="modal-content">
+    
+      <!-- LEFT: scrollable image stack -->
+      <div class="modal-images" id="modalImages">
+        <!-- injected images -->
+      </div>
+    
+      <!-- RIGHT: fixed text -->
+      <div class="modal-text">
+        <h2 id="modalTitle"></h2>
+        <div class="date" id="modalDate"></div>
+        <p id="modalDescription"></p>
+      </div>
+    
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

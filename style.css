@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+img {
+  image-orientation: from-image;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.painting {
+  flex: 0 0 50vw; /* 2 per screen */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.painting img {
+  max-width: 45vw;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== MODAL ===== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  inset: 5vh 5vw;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.painting img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.painting:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+/* LEFT: scrollable images */
+.modal-images {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-right: 1rem;
+}
+
+.modal-images img {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+/* RIGHT: fixed text */
+.modal-text {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.modal-text h2 {
+  margin-bottom: 10px;
+}
+
+.modal-text .date {
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+/* Close button */
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 1100;
+}
+
